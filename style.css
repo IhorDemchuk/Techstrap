@@ -1,0 +1,156 @@
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   background: #3D3D4B;
+   height: 100%;
+   font-size: 16px;
+   line-height: 24px;
+}
+
+.container {
+   padding: 0 20px;
+   max-width: 1140px;
+   width: 100%;
+   margin: 0 auto;
+   height: 100%;
+}
+
+header {
+   height: 100%;
+}
+
+.header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   flex-direction: column;
+}
+
+.logo_with_text {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50px;
+}
+
+.logo_with_text .logo {
+   animation: 0.8s ease-in 0s logo;
+   margin-right: 41px;
+}
+
+.logo_with_text .text {
+   animation: 0.8s ease-in 0s open;
+   overflow: hidden;
+   width: 100%;
+}
+
+.header_description {
+   max-width: 475px;
+   text-align: center;
+   color: #B3B3B5;
+   overflow: hidden;
+   position: relative;
+   opacity: 0;
+   margin-bottom: 70px;
+}
+
+.header_description p {
+   animation: 2s ease-in 2s header_description;
+   position: relative;
+}
+
+.try_it {
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   background: #5790FF;
+   border-radius: 100px;
+   padding: 16px 44px;
+   color: #fff;
+   transition: box-shadow .5s;
+   cursor: pointer;
+   overflow: hidden;
+   animation: 2s ease-in 3s try_it;
+   opacity: 0;
+}
+
+.try_it:hover {
+   box-shadow: 0 0 10px #5790FF;
+}
+
+.hidden {
+   display: none;
+}
+
+@keyframes open {
+   from {
+      width: 0
+   }
+}
+
+@keyframes logo {
+   from {
+      transform: scale(3)
+   }
+}
+
+@keyframes header_description2 {
+   from {
+      opacity: 0;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes header_description {
+   from {
+      bottom: -100px;
+   }
+
+   to {
+      bottom: 0;
+   }
+}
+
+
+@keyframes try_it {
+   from {
+      opacity: 0;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .logo_with_text {
+      flex-direction: column;
+   }
+
+   .logo_with_text .logo {
+      margin-right: 0;
+      padding-bottom: 41px;
+   }
+
+   .logo_with_text .text {
+      animation: 0.8s ease-in 0s open;
+   }
+
+   .header_description p {
+      animation: 1s ease-in 1.5s header_description;
+   }
+
+   .try_it {
+      animation: 2s ease-in 2s try_it;
+   }
+}
