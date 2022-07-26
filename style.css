@@ -85,6 +85,10 @@ header {
    opacity: 0;
 }
 
+.try_it span {
+   font-weight: 600;
+}
+
 .try_it:hover {
    box-shadow: 0 0 10px #5790FF;
 }
